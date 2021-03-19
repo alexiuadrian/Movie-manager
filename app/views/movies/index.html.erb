@@ -16,13 +16,13 @@
   <tbody>
     <% @movies.each do |movie| %>
       <tr class="text text-center">
-        <td class="position-relative"><div class="position-absolute top-50 start-50 translate-middle"><%= movie.name %></div></td>
-        <td class="position-relative"><div class="position-absolute top-50 start-50 translate-middle"><%= movie.release_year %></div></td>
-        <td class="position-relative"><div class="position-absolute top-50 start-50 translate-middle"><%= movie.genre %></div></td>
-        <td class="position-relative"><div class="position-absolute top-50 start-50 translate-middle"><%= movie.rating %></div></td>
-        <td><%= link_to 'Show', movie, class: "btn btn-dark" %></td>
-        <td><%= link_to 'Edit', edit_movie_path(movie), class: "btn btn-warning" %></td>
-        <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+        <td><%= movie.name %></td>
+        <td><%= movie.release_year %></td>
+        <td><%= movie.genre %></td>
+        <td><%= movie.rating %></td>
+        <td><%= link_to 'Show', movie%></td>
+        <td><%= link_to 'Edit', edit_movie_path(movie)%></td>
+        <td><%= button_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
